@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.liteninja.tween": {
+      "version": "https://github.com/sponticelli/LiteTween.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "62daba66ebc6795318b48c40f69ff9498b9b4f6a"
+    },
     "com.unity.collab-proxy": {
       "version": "1.15.17",
       "depth": 0,
