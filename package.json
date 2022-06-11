@@ -1,6 +1,6 @@
 {
     "name": "com.liteninja.tween",
-    "version": "0.0.0",
+    "version": "1.0.1",
     "displayName": "LiteTween",
     "description": "A Tween library implemented with Tasks",
     "unity": "2019.1",
@@ -10,7 +10,10 @@
     "dependencies": {
    },
    "keywords": [
-      "tween"
+      "tween",
+      "tweening",
+      "animation",
+      "interpolation"
     ],
     "author": {
       "name": "Sandro Ponticelli",

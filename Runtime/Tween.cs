@@ -8,14 +8,14 @@ namespace com.liteninja.tweens
     public class Tween
     {
         public delegate float EaseFunc(float f1);
-
         public delegate T LerpFunc<T>(T from, T to, float v);
-
+        
         private CancellationTokenSource _cancellationTokenSrc = null;
+        private ITimer _timer;
 
-        public Tween()
+        public Tween(ITimer timer = null)
         {
-            //Start<float>(Easing.Linear, 0f, 1f, 1f, (v) => { }, null, default);
+            _timer = timer ?? new UnityTimer();
         }
 
         public CancellationTokenSource GetCancellationTokenSource(CancellationToken cancellationToken)
@@ -63,19 +63,19 @@ namespace com.liteninja.tweens
             await Start(animationCurve.Evaluate, from, to, time, updateAction, lerpFunc, completeAction, cancellationToken);
         }
 
-        private static async Task Execute(EaseFunc easeFunc, float @from, float to, float time, Action<float> updateAction,
+        private async Task Execute(EaseFunc easeFunc, float @from, float to, float time, Action<float> updateAction,
             Action completeAction, CancellationToken token)
         {
             try
             {
                 var t = 0f;
                 var d = to - from;
-                var startTime = Time.time; //TODO Pass a time Provider
+                var startTime = _timer.Time;
                 if (d != 0)
                 {
                     while (Application.isPlaying && t < time)
                     {
-                        t = Time.time - startTime;
+                        t = _timer.Time - startTime;
                         var per = t / time;
                         if (per >= 1)
                         {

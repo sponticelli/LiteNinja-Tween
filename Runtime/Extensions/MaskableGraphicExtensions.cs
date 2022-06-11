@@ -9,11 +9,11 @@ namespace com.liteninja.tweens
     public static class MaskableGraphicExtensions
     {
         public static async Task Tween(this MaskableGraphic uiElement, Color to,
-            float time, Tween.EaseFunc easeFunc, Action completeAction = null,
+            float time, Tween.EaseFunc easeFunc, Action completeAction = null, ITimer timer = null,
             CancellationToken cancellationToken = default)
         {
             var from = uiElement.color;
-            var tween = new Tween();
+            var tween = new Tween(timer);
             await tween.Start(easeFunc, from, to, time, (v) =>
                 {
                     uiElement.color = v;
@@ -23,10 +23,10 @@ namespace com.liteninja.tweens
         }
 
         public static async Task Tween(this MaskableGraphic uiElement, Color to,
-            float time, AnimationCurve animationCurve, Action completeAction = null,
+            float time, AnimationCurve animationCurve, Action completeAction = null, ITimer timer = null,
             CancellationToken cancellationToken = default)
         {
-            await uiElement.Tween(to, time, animationCurve.Evaluate, completeAction, cancellationToken);
+            await uiElement.Tween(to, time, animationCurve.Evaluate, completeAction, timer, cancellationToken);
         }
     }
 
@@ -34,11 +34,11 @@ namespace com.liteninja.tweens
     public static class CanvasGroupExtensions
     {
         public static async Task TweenAlpha(this CanvasGroup canvasGroup, float to,
-            float time, Tween.EaseFunc easeFunc, Action completeAction = null,
+            float time, Tween.EaseFunc easeFunc, Action completeAction = null, ITimer timer = null,
             CancellationToken cancellationToken = default)
         {
             var from = canvasGroup.alpha;
-            var tween = new Tween();
+            var tween = new Tween(timer);
             await tween.Start(easeFunc, from, to, time, (v) =>
                 {
                     canvasGroup.alpha = v;
@@ -48,10 +48,10 @@ namespace com.liteninja.tweens
         }
 
         public static async Task TweenAlpha(this CanvasGroup canvasGroup, float to,
-            float time, AnimationCurve animationCurve, Action completeAction = null,
+            float time, AnimationCurve animationCurve, Action completeAction = null, ITimer timer = null,
             CancellationToken cancellationToken = default)
         {
-            await canvasGroup.TweenAlpha(to, time, animationCurve.Evaluate, completeAction, cancellationToken);
+            await canvasGroup.TweenAlpha(to, time, animationCurve.Evaluate, completeAction, timer, cancellationToken);
         }
     }
 }
