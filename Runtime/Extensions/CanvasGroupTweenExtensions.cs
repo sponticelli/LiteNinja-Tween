@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace com.liteninja.tweens
 {
-    public static class CanvasGroupExtensions
+    public static class CanvasGroupTweenExtensions
     {
         public static async Task TweenAlpha(this CanvasGroup canvasGroup, float to,
             float time, Tween.EaseFunc easeFunc, Action completeAction = null, ITimer timer = null,

@@ -99,6 +99,7 @@ namespace com.liteninja.tweens
             catch (Exception e)
             {
                 Debug.LogError(e);
+                throw;
             }
         }
     }
