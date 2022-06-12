@@ -4,9 +4,9 @@
     "displayName": "LiteNinja Tween",
     "description": "A Tween library implemented with Tasks",
     "unity": "2019.1",
-    "documentationUrl": "https://github.com/sponticelli/LiteTween/blob/main/README.md",
-    "changelogUrl": "https://github.com/sponticelli/LiteTween/blob/main/changelog.md",
-    "licensesUrl": "https://github.com/sponticelli/LiteTween/blob/main/LICENSE",
+    "documentationUrl": "https://github.com/sponticelli/LiteNinja-Tween/blob/main/README.md",
+    "changelogUrl": "https://github.com/sponticelli/LiteNinja-Tween/blob/main/changelog.md",
+    "licensesUrl": "https://github.com/sponticelli/LiteNinja-Tween/blob/main/LICENSE",
     "dependencies": {
    },
    "keywords": [
