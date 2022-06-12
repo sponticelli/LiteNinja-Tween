@@ -1,4 +1,4 @@
-# LiteTween
+# LiteNinja Tween
 A task-based Tween library for Unity3D.
 
 Tweening is an interpolation between 2 values using easing functions or Animation Curves.
@@ -26,7 +26,7 @@ It's possible to use an Animation Curve instead of an easing function:
 ```
 
 ### Extensions
-Lite Tween provides some extensions to tween objects.
+LiteNinja Tween provides some extensions to tween objects.
 
 ```cs
 var to = Vector3.one * Random.Range(1f, 5f);
@@ -58,7 +58,7 @@ t.Start(...);
 t.Cancel();
 ```
 
-### ITimeProvider
+### ITimer
 If not specified in the Tween ctor, Time.time it is used to run the tween (UnityTimer class). Other ready-to-use implementations are FixedTimer and UnscaledTimer.
 You can also write your implementation of the ITimer interface.
 
