@@ -1,4 +1,4 @@
-namespace com.liteninja.tweens
+namespace LiteNinja.Tweens
 {
     public interface ITimer
     {

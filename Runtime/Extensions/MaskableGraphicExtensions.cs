@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace com.liteninja.tweens
+namespace LiteNinja.Tweens
 {
     public static class MaskableGraphicExtensions
     {

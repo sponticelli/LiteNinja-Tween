@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace com.liteninja.tweens
+namespace LiteNinja.Tweens
 {
     public static class Easing
     {

@@ -3,7 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace com.liteninja.tweens
+namespace LiteNinja.Tweens
 {
     public static class RectTransformTweenExtensions
     {
