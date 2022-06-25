@@ -1,7 +1,7 @@
 using System.Threading;
 using UnityEngine;
 
-namespace com.liteninja.tweens.demo
+namespace LiteNinja.Tweens.Demo
 {
     public abstract class CancellableMonoBehaviour : MonoBehaviour
     {

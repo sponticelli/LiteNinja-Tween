@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using System.Threading.Tasks;
+using LiteNinja.Tweens;
 using UnityEngine;
 
 
-namespace com.liteninja.tweens.demo
+namespace LiteNinja.Tweens.Demo
 {
     public class DemoTransformController : CancellableMonoBehaviour
     {
